@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "path.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild",
+    "build-dll": "cd ../ && mingw32-make dll",
+    "build-native": "npm run build-dll && powershell -File build.ps1",
+    "build-all": "npm run build-dll && npm run build-native && echo F | xcopy /Y ..\\Terminater.dll .\\Terminater.dll",
+    "killgit": "node killTortoiseGit.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gypfile": true,
+  "devDependencies": {
+    "node-addon-api": "^6.0.0"
+  },
+  "dependencies": {},
+  "description": ""
+}

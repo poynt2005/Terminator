@@ -1,0 +1,6 @@
+**/*.dll
+**/*.exe
+**/*.node
+**/*.lib
+node/node_modules
+node/node_modules/*
